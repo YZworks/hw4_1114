@@ -1906,3 +1906,17 @@ Processing by MoviesController#index as HTML
   [1m[36mMovie Load (0.4ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
   Rendered movies/index.html.haml within layouts/application (35.5ms)
 Completed 200 OK in 310ms (Views: 302.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 128.194.131.138 at 2016-11-22 22:43:09 +0000
+Processing by MoviesController#index as HTML
+Redirected to https://hw4-1119-yiwenzhang.c9users.io/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date
+Completed 302 Found in 32ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?ratings%5BG%5D=1&ratings%5BNC-17%5D=1&ratings%5BPG%5D=1&ratings%5BPG-13%5D=1&ratings%5BR%5D=1&sort=release_date" for 128.194.131.138 at 2016-11-22 22:43:10 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"1", "NC-17"=>"1", "PG"=>"1", "PG-13"=>"1", "R"=>"1"}, "sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'NC-17', 'PG', 'PG-13', 'R')  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.haml within layouts/application (30.7ms)
+Completed 200 OK in 309ms (Views: 301.8ms | ActiveRecord: 2.0ms)
